@@ -41,6 +41,8 @@ jobs:
       # run tests!
       - run: yarn test
 
+      - run: yarn build
+      
       - run:
           name: "Install missing library on awscli"
           command: sudo apt-get install -y libpython-dev 

@@ -41,6 +41,9 @@ jobs:
       # run tests!
       - run: yarn test
 
+      - run:
+          name: "Install missing library on awscli"
+          command: sudo apt-get install -y libpython-dev 
       - aws-cli/install
 
       - aws-cli/configure

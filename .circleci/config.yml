@@ -49,4 +49,6 @@ jobs:
       - aws-cli/configure
 
       # deploy
-      - run: yarn deploy
+      - run:
+          name: "Deploy"
+          command: aws s3 sync build s3://spork-circleci-test/spork --delete
